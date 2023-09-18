@@ -8,12 +8,27 @@
 
 <body>	
 	<script>
-		function secondHighest(arr) {
-			//Write your code here
+					
+			     function secondHighest() {
+			    let arr=[10 ,20 ,30 ,90,5,80];
+			    let max = -Infinity, secondheightnumber = -Infinity;
 			
-		}
+			   for (const value of arr) {
+			    const nr = Number(value)
+			
+			    if (nr > max) {
+			       secondheightnumber=max;
+                   max=nr;
+			    } else if (nr < max && nr > secondheightnumber) {
+			      secondheightnumber = nr; 
+			    }
+			  }
+			
+				return secondheightnumber;
+			    
+			}
 
-		function Main() {
+			function Main() {
 			var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
@@ -21,7 +36,7 @@
 			}
 			alert(secondHighest(arr));
 		}
-		Main();
+		// Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
